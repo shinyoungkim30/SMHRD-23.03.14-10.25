@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Pretendard-Regular';
+}
+
+h1 {
+  margin: 0px;
+}
+
+.header-box {
+  height: 10vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.header-box>h1 {
+  padding: 10px;
+}
+
+.headerlist-box {
+  height: 10vh;
+}
+
+.headerlist-box>ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerlist-box>ul>li {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.main-box {
+  background-color: whitesmoke;
+  height: 80vh;
+  overflow: auto;
+}
+
+.main-img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.project-list {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  background-color: rgba(211, 211, 211, 0.349);
+  border-radius: 40px;
+  flex: 30%;
+  margin: 1%;
+  padding: 2%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-thumbnail {
+  width: 40%;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+}
+
+.info-box {
+  padding: 2% 7%;
+}
+
+h2 {
+  font-weight: 900;
+}
