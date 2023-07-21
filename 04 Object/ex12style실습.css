@@ -1,0 +1,17 @@
+div {
+    width: 100px;
+    height: 100px;
+}
+
+#redBox {
+    background-color: red;
+}
+#blueBox {
+    background-color: blue;
+}
+#greenBox {
+    background-color: green;
+}
+#grayBox {
+    background-color: gray;
+}

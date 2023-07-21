@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>Event 지정</h1>
+    <h1>Event 지정</h1>
+    <h1>Event 지정</h1>
+    <button>Change!</button>
+    <script>
+        // $(선택자).on(이벤트 타입, 이벤트 핸들러)
+        // 1. 버튼 클릭 시, h1 태그 글씨색 파란색 -> click
+        $('button').on('click',()=>{
+            $('h1').css('color', 'blue');
+        })
+        // 2. h1태그 마우스 올릴 시, 글씨색 빨간색 -> mouseover
+        // this : 호출된 HTML 객체를 저장
+        $('h1').on('mouseover', function(){
+            $(this).css('color', 'red');
+        })
+        // 3. h1태그 마우스 내릴 시, 글시색 검은색 -> mouseout
+        // 화살표 함수에서 this키워드는 e.target으로
+        $('h1').on('mouseout', (e)=>{
+            console.log(e.target);
+            $(e.target).css('color', 'black');
+        })
+    </script>
+</body>
+</html>

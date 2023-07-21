@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input Practice</title>
+</head>
+<body>
+    <h1>입력한 값을 h1태그로 출력해보기</h1>
+    <input type="text" id="inputTag">
+    <button onclick="getInput()">h1태그 출력</button>
+    <!-- 입력한 내용이 h1태그로 출력될 공간 -->
+    <div id="divTag"></div>
+    <script>
+        const getInput = ()=>{
+            // 1. input 요소 가져오기
+            let inputVal = document.getElementById('inputTag');
+            console.log(inputVal);
+            // 2. h1 태그로 출력하기
+            // 2-1. 출력할 공간 가져오기
+            // 2-2. h1 태그 기능을 넣어서 값 전달하기
+            document.getElementById('divTag').innerHTML += `<h1>${inputVal.value}</h1>`
+
+            // 3. input 태그 안 비워주기!
+            inputVal.value = '';
+        }
+    </script>
+</body>
+</html>

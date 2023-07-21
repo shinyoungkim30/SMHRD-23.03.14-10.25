@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS start</title>
+</head>
+<body id="bodyTag">
+    <!-- 이모티콘 넣는 방법 : 윈도우 + . -->
+    <a href="#">안녕하세요!</a>
+    <br><br>
+    <button id="btn1">변경하기! 😊</button>
+    <button id="btn2">되돌리기! 😂</button>
+    <br>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+    <h1>오늘은 4월 24일!</h1>
+    <p>월요일입니다. 한주 화이팅~ 😁</p>
+
+    <script>
+        // addElementById('아이디값')
+        // -> id를 통해서 요소를 가지고 오는 메소드
+        // addEventListener(이벤트 타입, 이벤트 핸들러)
+        // -> event를 달아주는 메소드
+
+        // 1. 첫번째 버튼 클릭 시
+        // 배경색 -> 검은색
+        // 글씨색 -> 흰색        
+        document.getElementById('btn1').addEventListener('click', ()=>{
+            document.getElementById('bodyTag').style.backgroundColor = 'black';
+            document.getElementById('bodyTag').style.color = 'white';
+        })
+
+        // 2. 두번째 버튼 클릭 시
+        // 배경색 -> 흰색
+        // 글씨색 -> 검은색
+        document.getElementById('btn2').addEventListener('click', ()=>{
+            document.getElementById('bodyTag').style.backgroundColor = 'white';
+            document.getElementById('bodyTag').style.color = 'black';
+        })
+    </script>
+</body>
+</html>

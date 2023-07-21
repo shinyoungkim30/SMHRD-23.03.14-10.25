@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array practice</title>
+    <style>
+        table, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 0. 과목 수, 과목 이름, 과목 점수, 총점, 평균 초기화
+        let num =0;
+        let nameList = [];
+        let scoreList = [];
+        let sum =0;
+        let avg=0;
+
+        // 1. 과목 수 입력
+        num = Number(prompt('과목 수 입력'));
+        console.log(num);
+
+        // 2. 과목 수만큼 과목 이름 입력
+        for(let i=0; i<num; i++){            
+            nameList.push(prompt('점수를 입력할 과목을 입력하세요'));
+        }
+        console.log(nameList);
+        // 3. 각 과목들의 점수를 입력        
+        // 4. 총점, 평균 값을 도출
+        for(let i=0; i<nameList.length; i++){
+            let score = Number(prompt(`${nameList[i]}의 점수를 입력`));            
+            scoreList.push(score);
+            sum += score;
+        }
+        console.log(scoreList);        
+        console.log(sum);
+
+        avg = parseInt(sum / num);
+        
+        console.log(avg);
+        // 5. 결과를 HTML내 표 형태로 출력
+        document.write(`
+        <table>
+            <tr>
+        `);
+        for(let i=0; i<num; i++){
+            document.write(`
+                <td>${nameList[i]}</td>
+        `);
+        }
+        
+        document.write(`    
+                <td>총점</td>    
+                <td>평균</td>    
+            </tr>    
+            <tr>
+        `);
+        for(let i=0; i<num; i++){
+            document.write(`
+                <td>${scoreList[i]}</td>
+        `);
+        }        
+        
+        document.write(`    
+                <td>${sum}</td>    
+                <td>${avg}</td>    
+            </tr>    
+        </table>
+        `);
+
+    </script>
+</body>
+</html>

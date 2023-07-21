@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery start</title>
+    <!-- 1. 다운로드 방식 -->
+    <!-- <script src="./js/jquery-3.6.4.min.js"></script> -->
+
+    <!-- 2. 네트워크 방식 -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <p>jQuery start</p>
+    <button id="textBtn">TEXT</button>
+    <button id="htmlBtn">HTML</button>
+
+    <script>
+        // jQuery
+        // -> wrapper(래퍼) : 인자로 전달된 요소들에 jQuery의 기능성을 부가해서 반환
+        //                      jQuery 객체 반환
+        // $(선택자).메소드()
+        
+        // 1. p요소 가져오기
+        let valJS = document.querySelector('p');
+        console.log(valJS);
+        // let valJQ = jQuery('p');
+        let valJQ = $('p');
+        console.log(valJQ);
+
+        // 2. TEXT 버튼 클릭 시, 내용만
+        // JS -> innerText
+        // jQ -> text()
+        $('#textBtn').click(()=>{
+            // valJS.innerText = '내용 변경!';
+            $('p').text('<h1>내용 변경!</h1>');
+        })
+        // 3. HTML 버튼 클릭 시, 태그까지
+        $('#htmlBtn').click(()=>{
+            // valJS.innerHTML = '<a href="#">a태그로 변경!</a>';
+            $('p').html('<a href="#">a태그로 변경!</a>')
+        })
+    </script>
+</body>
+</html>

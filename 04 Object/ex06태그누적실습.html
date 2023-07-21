@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+<body>
+    <h1>클릭 한번 해볼까요?</h1>
+    <button onclick="h1Func()">h1태그 생성</button>
+    <button onclick="aFunc()">a태그 생성</button>
+    <button onclick="ulFunc()">ul태그 생성</button>
+    <!-- 생성된 태그가 쌓이는 공간 -->
+    <div id="divTag"></div>
+    <script>
+        // 1. 태그가 쌓일 공간인 div 요소 가지고 오기
+        let divVal = document.getElementById('divTag');
+
+        // 2. 버튼 별로 클릭 이벤트 만들어서 태그 생성하기
+        // 2-1. h1 태그
+        const h1Func = ()=>{
+            // div 요소에 h1 태그 기능을 더한 텍스트 넣어주기!
+            divVal.innerHTML += '<h1>DOM 활용하기!</h1>';
+        }
+
+        // 2-2. a태그
+        const aFunc = ()=>{
+            divVal.innerHTML += '<a href="#">Google로 이동!</a>';
+        }
+
+        // 2-3. ul태그
+        const ulFunc = ()=>{
+            divVal.innerHTML += '<ul><li>HTML</li><li>CSS</li><li>JS</li></ul>';
+        }
+    </script>
+</body>
+</html>

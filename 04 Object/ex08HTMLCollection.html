@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Collection</title>
+</head>
+<body>
+    <ul>
+        <li>순두부찌개</li>
+        <li>스테이크돌솥밥</li>
+        <li>쌈밥</li>
+    </ul>
+
+    <script>
+        // getElements~ 메소드 사용해서 요소 가져오기
+        // -> HTMLCollection 객체 반환
+        // 배열처럼 인덱스 번호와 길이를 갖는다!
+
+        // li 요소들 가져오기
+        let foodList = document.getElementsByTagName('li');
+        console.log(foodList);
+        console.log(foodList[1].innerText);
+
+        for (let i = 0; i < foodList.length; i++) {
+            console.log(foodList[i].innerText);            
+        }
+
+        // 배열 관련 함수 X -> 유사 배열!
+        // foodList.forEach(element => {
+        //     console.log(element.innerText);
+        // });
+    </script>
+</body>
+</html>
