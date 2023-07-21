@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* border-radius : 경계선을 둥글게 만들어주는 속성
+            border - 위/아래 - 좌/우 - radius
+            만약 네 방향 모두 둥글게 만들어주고 싶다면
+            border-radius */
+
+        body{
+            /* body태그의 기본 margin 값은 8px
+                => default 값 */
+            margin: 0px;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+
+            /* margin : 경계선을 기준으로 바깥 여백 */
+            /* margin : 50px; */
+            margin-left: 10px;
+            margin-top: 0px;
+
+            /* border-radius */
+            /* 오른쪽 위쪽을 둥글게? */
+            border-top-right-radius: 20px;
+
+            /* 왼쪽 아래를 둥글게? */
+            border-bottom-left-radius: 60px;
+
+            /* 모든 방향을 둥글게? */
+            border-radius: 50px;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        #box1{            
+            background-color: red;
+        }
+        #box2{
+            background-color: blue;
+            margin-left: 100px;
+        }
+        #box3{
+            background-color: green;
+            margin-left: 200px;
+        }
+        #box4{
+            background-color: gray;
+            margin-left: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 자동완성 div#box + Enter -->
+    <div id="box">Content</div>
+
+    <h2>실습문제</h2>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

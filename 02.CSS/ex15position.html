@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parents div{
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            border: 1px solid black;
+        }
+
+        /* position : 자유자재로 위치를 배치하는 속성 */
+        #static{
+            /* (1) static : 정적인
+                position 속성의 default 값
+                위치속성이 비활성화 */
+            
+            top : 10px;
+            /* top : 맨 위에서부터 10px 이동해라
+                출발점 : top, 이동방향 : 아래로 */
+
+            left : 10px;
+        }
+
+        #relative{
+            /* (2) relative : 상대적인
+                위치속성 활성화
+                기준 : 원래 본인이 있던 위치 */
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        #parents{
+            position: relative;
+        }
+
+        #absolute{
+            /* (3) absolute : 절대적인
+                위치속성 활성화
+                기준 : static이 아닌 부모
+                부모요소가 존재하지 않거나,
+                부모가 static이라면 body태그를 기준으로 한다 */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #fixed{
+            /* (4) fixed : 고정적인
+                위치속성 활성화, 스크롤 무시!
+                기준 : body 태그 */
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top"></div>
+    body 태그 안쪽
+    <div id="parents">
+        부모 태그 안쪽
+        <div id="static">static</div>
+        <div id="relative">relative</div>
+        <div id="absolute">absolute</div>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <h1>오늘은 즐거운 금요일!</h1>
+        <a href="#top">
+            <div id="fixed">fixed</div>
+        </a>
+    </div>
+</body>
+</html>

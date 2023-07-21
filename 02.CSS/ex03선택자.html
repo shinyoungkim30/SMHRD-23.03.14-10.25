@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            선택자의 종류!
+            (1) 전체 선택자 : 모든 요소를 선택
+                기호 : *
+        */
+
+        *{
+            color: green;
+        }
+
+        /* 
+            (2) 태그 선택자 : 특정 태그를 선택
+                기호X, 태그 이름
+        */
+
+        li{
+            color: hotpink;
+        }
+
+        /* 
+            (3) 클래스 선택자
+            => 선택자들을 구분해서 지정해줘야하는 경우 중에,
+                복수 요소를 지정하고 싶은 경우
+            => 기호 : .클래스이름
+        */
+
+        .dinner {
+            color: blue;
+        }
+
+        /* 
+            (4) 아이디 선택자
+            => 선택자를 구분해서 지정해줘야 하는 경우 중에,
+                "단 하나의" 요소만 지정하고 싶은 경우
+            => 그 아이디는 한 문서당 한번만
+            => 기호 : #아이디이름
+        */
+
+        #mypick{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    <p>웹페이지를 꾸며주는 스타일 시트 언어</p>
+    <ul>
+        <li>CSS 기본구조</li>
+        <li>CSS 선택자</li>
+        <li>CSS 스타일</li>
+    </ul>
+
+    <h1 class="dinner">오늘 뭐먹지?</h1>
+    <ul class="dinner">
+        <li class="dinner">샐러드</li>
+        <li class="dinner" id="mypick">초밥</li>
+        <li class="dinner">연어</li>
+    </ul>
+</body>
+</html>

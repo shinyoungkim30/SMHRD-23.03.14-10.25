@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 임시작성 => 나중에 지우기! */
+        .container div {
+            border: 1px solid black;
+        }
+
+        .container{
+            background-color: whitesmoke;
+            height: 100px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .box{
+            flex-basis: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+        }
+
+        #center{
+            flex-basis: 70%;
+        }
+        
+        div>a{
+            margin: 20px;
+        }
+
+        #right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- 상단바 전체 영역 -->
+    <div class="container">
+        <div class="box" id="left">
+            <h1>스타벅스</h1>
+        </div>
+        <div class="box" id="center">
+            <a href="#">메뉴</a>
+            <a href="#">베스트</a>
+            <a href="#">뉴스</a>
+        </div>
+        <div class="box" id="right">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+    </div>
+</body>
+</html>

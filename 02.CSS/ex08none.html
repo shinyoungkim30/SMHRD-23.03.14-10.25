@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .answer{
+            display: none;
+        }
+
+        /* 
+        1. 마우스를 질문위에 올린다면 => 질문:hover
+        2. 질문과 근접후행 관계인 답을 보이게 => +
+        3. 답을 한줄 밑에 뜨도록 => display : block
+        */
+
+        .question:hover+.answer{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h3> display : none </h3>
+    <span class="question">
+        Q. 제가 가장 좋아하는 음료는 무엇일까요?
+    </span>
+    <span class="answer">
+        A. 콜라, 아침햇살, 초록매실
+    </span>
+    <br>
+    <span class="question">
+        Q. 저의 mbti는 무엇일까요?
+    </span>
+    <span class="answer">
+        A. ISTP 입니다.
+    </span>
+</body>
+</html>
