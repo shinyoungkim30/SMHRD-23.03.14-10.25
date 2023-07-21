@@ -1,0 +1,15 @@
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container>div {
+    flex-basis: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid pink;
+    padding: 10px;
+}
