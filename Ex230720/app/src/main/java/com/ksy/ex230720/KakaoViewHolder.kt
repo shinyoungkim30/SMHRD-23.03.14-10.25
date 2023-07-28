@@ -22,7 +22,7 @@ class KakaoViewHolder(var itemView: View) : ViewHolder(itemView) {
 
     // default 생성자 => 매개변수가 하나도 없는 생성자!
     init {
-        img = itemView.findViewById(R.id.img)
+        img = itemView.findViewById(R.id.circle_iv)
         tv_msg = itemView.findViewById(R.id.tv_msg)
         tv_name = itemView.findViewById(R.id.tv_name)
         tv_time = itemView.findViewById(R.id.tv_time)
